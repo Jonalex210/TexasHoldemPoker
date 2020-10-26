@@ -5,6 +5,7 @@
  */
 package texasholdempoker;
 
+
 /**
  *
  * @author maste
@@ -14,10 +15,25 @@ public class Main {
     /**
      * @param args the command line arguments
      */
+
+
+   
+   
     public static void main(String[] args) {
-        MainPage window = new MainPage();
+        StartPage window = new StartPage();
         window.setVisible(true);
        
+        Dealer de = new Dealer();
+        GamePage gam = new GamePage();
+        int counter = 0;
+        if(counter == 0){
+        int oneDestributedCard =de.distributedCards(de.shuffleArray(de.getDeck()));
+        int[] kdestributedDeck =de.shuffleArray(de.getDeck());
+        kdestributedDeck = de.shuffleArray(de.getDeck());
+        for(int i =0; i<kdestributedDeck.length;i++){
+            System.out.println(kdestributedDeck[i]+" ");
+        }
+       
     }
-    
+    }
 }
